@@ -1,9 +1,21 @@
 package impl;
 
-public class Employee {
+import skeleton.Person;
 
-	public Employee() {
-		// TODO Auto-generated constructor stub
+import java.util.UUID;
+
+public class Employee extends Person {
+	String department;
+	String job;
+
+	public Employee(String name, String department, String job) {
+		super(name);
+		this.department = department;
+		this.job = job;
 	}
 
+	@Override
+	public String toString() {
+		return (super.toString()+" "+department+" "+job);
+	}
 }
